@@ -10,5 +10,5 @@
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
 secret = Rails.env.production? ? ENV['SECRET_TOKEN'] : "top_secret_token"
-YourApp::Application.config.secret_key_base = secret
+Demo::Application.config.secret_key_base = secret
 

@@ -12,10 +12,7 @@
  *= require_tree .
  */
 
-$highlight-color: #bc3e3e;
-$default-color: #fff;
-$background-color: #19232b;
-
+@import "variables";
 
 body {
 	margin: 0;

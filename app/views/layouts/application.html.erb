@@ -7,10 +7,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body class='<%= controller.controller_name %>'>
-	<div id="banner">
-		<%= image_tag("logo.png") %>
-		<%= @page_title || "Pragmatic Bookshelf" %>
-	</div>
+	<h1 id="banner">
+		<%= @page_title || "The epic comic book store" %>
+	</h1>
 	<div id="columns">
 		<div id="side">
 			<% if @cart %>
@@ -20,9 +19,11 @@
 			<% end %>
 			<ul>
 				<li><a href="/">Home</a></li>
-				<li><a href="/faq">Questions</a></li>
+				<li><a href="/products">Products</a></li>
+				<%#
 				<li><a href="/news">News</a></li>
 				<li><a href="/contact">Contact</a></li>
+				#%>
 			</ul>
 		</div>
 		<div id="main">

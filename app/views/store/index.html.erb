@@ -2,12 +2,6 @@
 <p id="notice"><%= notice %></p>
 <% end %>
 
-<div>
-	<img src="http://laughingsquid.com/wp-content/uploads/calteasecal.gif" style="height: 200px; float: right;">
-	<h1>The epic comic store</h1>
-	<div style="clear:both;">
-</div>
-
 <% @products.each do |product| %>
 	<div class="entry">
 		<%= image_tag(product.image_url) %>

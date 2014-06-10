@@ -2,17 +2,24 @@
 <p id="notice"><%= notice %></p>
 <% end %>
 
+<h1>Our latest products</h1>
+
 <ul class="products">
-<% @products.each do |product| %>
-	<li>
-		<h3><%= product.title %></h3>
-		<%= image_tag(product.image_url) %>
-		<%= sanitize(product.description) %>
-		<div class="price_line">
-			<span class="price"><%= number_to_currency(product.price) %></span>
-			<%= button_to 'Add to Cart', line_items_path(product_id: product), remote: true %>
-		</div>
-	</li>
+<% cache ['store', Product.latest] do %>
+	<% @products.each do |product| %>
+		<% cache ['entry', product] do %>
+			<li>
+				<h3><%= product.title %></h3>
+				<%= image_tag(product.image_url) %>
+				<%= sanitize(product.description) %>
+				<div class="price_line">
+					<span class="price"><%= number_to_currency(product.price) %></span>
+					<%= button_to 'Add to Cart', line_items_path(product_id: product), remote: true %>
+					<div style="clear:both;"></div>
+				</div>
+			</li>
+		<% end %>
+	<% end %>
 <% end %>
 </ul>
 <div style="clear:both;"></div>

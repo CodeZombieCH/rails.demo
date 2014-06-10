@@ -30,11 +30,16 @@
 			margin-top: 1em;
 			border: silver solid 1px;
 			box-shadow: silver 3px 3px 10px;
+			background: #fff;
 
 			text-align: center;
 
 			&:hover {
 				box-shadow: silver 5px 5px 12px;
+
+				h3 {
+					color: black;
+				}
 			}
 
 			h3 {
@@ -52,10 +57,8 @@
 			div.price_line {
 				margin-top: 5px;
 				.price {
+					font-size: 16px;
 					float: left;
-					color: #44a;
-					font-weight: bold;
-					margin-right: 3em;
 					text-align: left;
 				}
 

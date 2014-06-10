@@ -19,16 +19,14 @@ body {
 	padding: 0;
 }
 
-#banner {
-	width: 100%;
-
+header {
 	margin: auto 0;
 	padding: 15px;
 
 	background-color: $highlight-color;
 	text-align: center;
 	font-family: 'League Gothic';
-	font-size: 54px;
+	font-size: 68px;
   	line-height: normal;
   	color: #fff;
   	text-transform: uppercase;
@@ -45,19 +43,24 @@ body {
 }
 
 #columns {
-	background: $background-color;
 
 	#main {
-		margin-left: 17em;
+		margin-left: 23em;
 		padding: 1em;
-		background: white;
+
+		h1 {
+			margin-top: 8px;
+			font-size: 28px;
+			line-height: normal;
+		}
 	}
 
 	#side {
 		float: left;
 		padding: 1em 2em;
-		width: 13em;
-		background: $background-color;
+		width: 18em;
+		min-height: 600px;
+		text-align: right;
 
 		form, div {
 			display: inline;
@@ -69,14 +72,18 @@ body {
 
 		#cart {
 			display: block;
-			margin-top: 40px;
+			margin-top: 50px;
 			font-size: smaller;
-			color:     white;
+
+			h2 {
+				font-size: 28px;
+			}
 
 			table {
-				border-top:    1px solid $default-color;
-				border-bottom: 1px solid $default-color;
+				border-top:    1px solid black;
+				border-bottom: 1px solid black;
 				margin-bottom: 10px;
+				text-align: left;
 			}
 		}
 
@@ -85,15 +92,15 @@ body {
 			li {
 				list-style: none;
 				a {
-					color: $default-color;
+					color: $highlight-color;
 					text-decoration: none;
 					font-family: 'League Gothic';
-					font-size: 28px;
+					font-size: 42px;
 					line-height: normal;
 					display: block;
 
 					&:hover {
-						color: $highlight-color;
+						color: black;
 						background-color: inherit;
 					}
 				}
@@ -136,4 +143,12 @@ body {
 			display: none
 		}
 	}
+}
+
+footer {
+	margin: 0;
+	padding: 8px 16px;
+	background: $highlight-color;
+	text-align: center;
+	color: $default-color;
 }

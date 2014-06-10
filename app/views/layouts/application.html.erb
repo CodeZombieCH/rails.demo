@@ -15,10 +15,8 @@
 			<ul>
 				<li><a href="/">Home</a></li>
 				<li><a href="/products">Products</a></li>
-				<%#
-				<li><a href="/news">News</a></li>
-				<li><a href="/contact">Contact</a></li>
-				#%>
+				<li><%= link_to 'News', page_path('news') %></li>
+				<li><%= link_to 'Contact', page_path('contact') %></li>		
 			</ul>
 			<% if @cart %>
 				<%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
